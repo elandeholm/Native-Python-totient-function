@@ -27,7 +27,8 @@ def phi(mn):
 					if d > 1:
 						r *= d
 						r //= phi(d)
-					break
+						
+				break
 
 			divisor += 1 + divisor % 2
 	else:
