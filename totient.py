@@ -20,13 +20,14 @@ def phi(mn):
 
 				r = prime_power - prev_prime_power
 
-				if k > 2:
-					r *= phi(k)
-				d = gcd(prime_power, k)
-				if d > 1:
-					r *= d
-					r //= phi(d)
-				break
+				if k > 1:
+					if k > 2:
+						r *= phi(k)
+					d = gcd(prime_power, k)
+					if d > 1:
+						r *= d
+						r //= phi(d)
+					break
 
 			divisor += 1 + divisor % 2
 	else:
